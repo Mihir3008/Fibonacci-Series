@@ -1,0 +1,24 @@
+#include<iostream>    
+using namespace std;      
+void printFibonacci(int a)
+{    
+    static int a1=0, a2=1, a3;    
+    if(a>0)
+    {    
+         a3 = a1 + a2;    
+         a1 = a2;    
+         a2 = a3;    
+ cout<<a3<<" ";    
+         printFibonacci(a-1);    
+    }    
+}    
+int main()
+{    
+    int a;    
+    cout<<"Enter the number of elements: ";    
+    cin>>a;    
+    cout<<"Fibonacci Series: ";    
+    cout<<"0 "<<"1 ";  
+    printFibonacci(a-2);  //n-2 because 2 numbers are already printed    
+     return 0;  
+}  
